@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated background for visual effect -->
+    <div class="animated-bg">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <h1>Weather App</h1>
+        <form id="search-form" onsubmit="return false;">
+            <input type="text" id="searchInput" placeholder="Enter city name" required>
+            <button id="searchButton" type="button">Search</button>
+        </form>
+        <div id="weatherDisplay">
+            <img id="weatherIcon" src="" alt="Weather Icon" style="display:none;">
+            <h2 class="desc"></h2>
+            <p class="weather"></p>
+            <p><b>Humidity:</b> <span class="humidity"></span></p>
+            <p><b>Wind Speed:</b><span id="windSpeed"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
