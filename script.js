@@ -6,7 +6,7 @@ humidity = document.querySelector(".humidity");
 weather = document.querySelector(".weather");
 desc = document.querySelector(".desc");
 API = "8cf5ac5621c8d0266298a149e49d7514";
-// --------------------- Created By InCoder ---------------------
+
 const setWeatherDetails = (data) => {
   // console.log(data);
   desc.innerHTML = data.weather[0].description;
@@ -46,7 +46,7 @@ const callAPI = (id) => {
     `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${id}`
   )
     .then((response) => {
-      // indicates whether the response is successful (status code 200-299) or not
+     
       if (!response.ok) {
         alert("Check spelling of City and try again or Something Went Wrong!");
         throw new Error(`Request failed with status ${response.status}`);
@@ -75,3 +75,4 @@ searchInput.addEventListener("keypress", (e) => {
 });
 
 searchButton.click();
+
